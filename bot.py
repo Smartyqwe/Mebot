@@ -16,7 +16,8 @@ DISCORD_TOKEN  = os.environ["DISCORD_TOKEN"]
 STATUS_CHANNEL = int(os.environ["STATUS_CHANNEL"])  # channel id to post status msgs
 
 # ── Aternos client ────────────────────────────────────────────────────────
-atclient = aternos_lib.Client.from_credentials(ATERNOS_USER, ATERNOS_PASS)
+# NEW
+atclient = aternos_lib.Client.from_credentials(ATERNOS_USER, ATERNOS_PASS, sessions_dir='./')
 mc_server = atclient.list_servers()[SERVER_INDEX]
 
 # ── Discord setup ─────────────────────────────────────────────────────────
